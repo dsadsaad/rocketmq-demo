@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server: MQ_INST_123123_Bcw0lhYs.mq-internet-access.mq-internet.aliyuncs.com:80
+          access-key: LTAA4GDznzx3xwh6ysGWtAnp
+          secret-key: 9taa0AUApqxC5ENg9baghuk7qXlyS0
+      bindings:
+        custom_output:
+          destination: MQ_INST_123123_Bcw0lhYs%test-topic
+          producer:
+            errorChannelEnabled: true
+  application:
+    name: rocketmq-demo
+
+
+logging:
+  level:
+    root: info
